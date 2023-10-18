@@ -115,3 +115,84 @@ nav ul li a:hover{
     color: darkgreen;
     font-size: 20px;
 }
+
+
+/* -----------Estilos del Footer-------------*/
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: orange; /*A cambiar???*/
+}
+
+.container_footer {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.iconos_redes {
+    display: flex;
+    justify-content: center;
+}
+
+.iconos_redes a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.iconos_redes a i {
+    font-size: 1.5em;
+    opacity: 0.9;
+}
+
+.iconos_redes a:hover {
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.iconos_redes a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.derechos_footer {
+    padding: 20px 0px 10px;
+    text-align: center;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*--- Info del Footer ---*/
+
+.h3_footer {
+   text-align: center;
+}
+
+.info_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "contacto pagos";
+    
+}
+
+.contacto {
+   grid-area: contacto;
+   text-align: center;
+   padding: 10px;
+}
+
+.pagos {
+    grid-area: pagos;
+    text-align: center;
+    padding: 10px;
+}
