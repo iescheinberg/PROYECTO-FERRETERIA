@@ -196,3 +196,41 @@ nav ul li a:hover{
     text-align: center;
     padding: 10px;
 }
+
+
+/* Estilos boton flotante de Whatsapp */
+
+.btn_wsp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    z-index: 999;
+}
+
+.btn_wsp:hover {
+    text-decoration: none;
+    background-color: white;
+    color: #25d366;
+    transition: 0.5s;
+}
+
+
+/*---------Para hacer responsive-----------*/
+
+/*La info del footer:*/
+
+@media (max-width: 600px) {    /* A modificar resoluciones para los puntos de corte!!! */
+    .info_footer {
+        grid-template-areas: 
+        "contacto contacto"
+        "pagos pagos";
+    }
+}
