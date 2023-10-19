@@ -117,6 +117,16 @@ nav ul li a:hover{
 }
 
 
+/*Prueba del carrito del Header en pag. "Quienes somos"*/
+
+.icono_header i {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(109, 109, 250);
+}
+
+
 /* -----------Estilos del Footer-------------*/
 
 .footer {
@@ -234,3 +244,4 @@ nav ul li a:hover{
         "pagos pagos";
     }
 }
+
