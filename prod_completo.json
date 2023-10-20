@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "nombre": "Lijadora Orbital Gamma",
+        "descripcion": "Modelo G1920. 50Hz 180W 220V. Celeste. Cable. ",
+        "imagen": "assets/img/lijadoraorbitalgamma.png",
+        "video": "",
+        "precio": 22760,
+        "marca": "Gamma"
+    },
+    {
+        "id": 2,
+        "nombre": "Lijadora Orbital Stanley Inalambrica",
+        "descripcion": "Modelo Scs220. Roto Orbital Inalámbrica 20v 125mm. ",
+        "imagen": "assets/img/lijadoraorbitalstanley.png",
+        "video": "",
+        "precio": 55500,
+        "marca": "Stanley"
+    },
+    {
+        "id": 3,
+        "nombre": "Lijadora Orbital Black Decker",
+        "descripcion": "Modelo CD455. 50Hz 138W 220V. Naranja y negra. ",
+        "imagen": "assets/img/lijadoraorbitalblack.png",
+        "video": "",
+        "precio": 46994,
+        "marca": "Black Decker"
+    },         
+    {
+        "id": 4,
+        "nombre": "Amoladora Stanley",
+        "descripcion": "Modelo Scg400. Angular 4-1/2. 20v. Inalambrica. ",
+        "imagen": "assets/img/amoladorastanley.png",
+        "video": "",
+        "precio": 84822,
+        "marca": "Stanley"
+    },
+    {
+        "id": 5,
+        "nombre": "Amoladora Gamma",
+        "descripcion": "Modelo G1909. Angular 50 Hz 650 W 220 V. Con accesorios. Celeste. Cable. ",
+        "imagen": "assets/img/amoladoragamma.png",
+        "video": "",
+        "precio": 18231,
+        "marca": "Gamma"
+    },
+    {
+        "id": 6,
+        "nombre": "Amoladora Black Decker",
+        "descripcion": "Amoladora Black Decker",
+        "imagen": "assets/img/amoladorablack.png",
+        "video": "",
+        "precio": 21889,
+        "marca": "Black Decker"
+    },
+    {
+        "id": 7,
+        "nombre": "Taladro Black Decker",
+        "descripcion": "Modelo BCD704C1. Con percutor. Es atornillador. 10mm 20V 110V/220V. Con accesorios. Inalámbrico ",
+        "imagen": "assets/img/taladroblack.png",
+        "video": "",
+        "precio": 87796,
+        "marca": "Black Decker"
+    },
+    {
+        "id": 8,
+        "nombre": "Taladro Stanley",
+        "descripcion": "Modelo SDH600. Con percutor. Es atornillador. 13mm 600W 220V 50Hz. Con accesorios. Cable. ",
+        "imagen": "assets/img/taladrostanley.png",
+        "video": "",
+        "precio": 35399,
+        "marca": "Stanley"
+    },
+    {
+        "id": 9,
+        "nombre": "Taladro Gamma",
+        "descripcion": "Modelo G1902. Con percutor. 13mm 850W 220V 60Hz. Con accesorios. Cable. ",
+        "imagen": "assets/img/taladrogamma.png",
+        "video": "",
+        "precio": 23990,
+        "marca": "Gamma"
+    },
+    {
+        "id": 10,
+        "nombre": "Desmalezadora Gamma",
+        "descripcion": "Modelo G1835AR. Nafta 44cc. 1.4kW 250mm",
+        "imagen": "assets/img/desmalezadoragamma.png",
+        "video": "",
+        "precio": 64999,
+        "marca": "Gamma"
+    },
+    {
+        "id": 11,
+        "nombre": "Desmalezadora Daewoo",
+        "descripcion": "Modelo D520ECO. Motor 2 Tiempos 52 Cc. Jardin cesped. ",
+        "imagen": "assets/img/desmalezadoradaewoo.png",
+        "video": "",
+        "precio": 106600,
+        "marca": "Daewoo"
+    },
+    {
+        "id": 12,
+        "nombre": "Desmalezadora Black Decker",
+        "descripcion": "Modelo GST33. Nafta 33 cc. 1.2 hp. Manubrio abierto. Prot de seguridad. ",
+        "imagen": "assets/img/desmalezadorablackdecker.png",
+        "video": "https://youtu.be/xmz_gHSSw2s",
+        "precio": 144490,
+        "marca": "Black Decker"
+    }
+]

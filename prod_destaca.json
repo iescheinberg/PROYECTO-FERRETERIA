@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nombre": "Lijadora Orbital Gamma",
+        "descripcion": "Modelo G1920 celeste 50Hz 180W 220V. Cable. ",
+        "imagen": "assets/img/lijadoraorbitalgamma.png",
+        "video": "",
+        "precio": 22760,
+        "marca": "Gamma"
+    },
+    {
+        "id": 5,
+        "nombre": "Amoladora Gamma",
+        "descripcion": "Amoladora angular Gamma G1909 de 50 Hz color celeste 650 W 220 V + accesorios. Cable. ",
+        "imagen": "assets/img/amoladoragamma.png",
+        "video": "",
+        "precio": 18231,
+        "marca": "Gamma"
+    },
+    {
+        "id": 9,
+        "nombre": "Taladro Gamma",
+        "descripcion": "Taladro percutor eléctrico de 13mm Gamma G1902 850W + accesorios con caja de cartón 220V 60Hz. Cable. ",
+        "imagen": "assets/img/taladrogamma.png",
+        "video": "",
+        "precio": 23990,
+        "marca": "Gamma"
+    }
+]

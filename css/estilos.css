@@ -48,6 +48,96 @@
     
 }
 
+
+/*--jorge-ini----------------*/
+/* -------------------------- CONTENEDOR DE PRODUCTO ---------------------------*/
+.prod-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+
+/* -------------------------- CARD DE PRODUCTO ---------------------------*/
+.prod-container .prod-card {
+    width: 200px;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: darkgreen;
+    color: antiquewhite;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);}
+
+.prod-container .prod-card img {
+    width: 100%;
+    height: auto;}
+
+.prod-container .prod-card .prod-nombre {
+    margin: 0;    
+    height: 30%;
+    padding: 15px;
+    text-align: center;}
+
+.prod-container .prod-card .prod-descri {
+    color: darkgreen;
+    bottom: -100%;
+    position: absolute;    
+    padding: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 15px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: bottom 0.4s ease-in-out;}
+.prod-container .prod-card:hover .prod-descri {
+    bottom: 0;}
+
+.prod-container .prod-card:hover .prod-descri .detail-button {
+    padding: 5px;
+    border: 0;
+    background-color:darksalmon ;
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    border-radius: 10px;
+    position: relative;
+    left: 25%;}
+
+/* -------------------------- DETALLE DE PRODUCTO ---------------------------*/
+.prod-container .prod-detalle {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    background-color: darkgreen;
+    color: antiquewhite;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.3);}
+
+.prod-container .prod-detalle h2{
+    margin: 10px;
+    text-align: center;}
+
+.prod-container .prod-detalle p{
+    margin: 10px;
+    text-align: left;}
+
+.prod-container .prod-detalle img {    
+    width: 95%;
+    height: auto;}
+
+.prod-container .prod-detalle button {
+    padding: 5px;
+    border: 0;
+    background-color:darksalmon ;
+    margin: 10px;     
+    border-radius: 10px;
+    position: relative;
+    left: 0;}
+/*--jorge-fin---------------*/
+
+
 .main_prod{
     display: flex;
     justify-content: space-between;
