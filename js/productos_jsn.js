@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const productListContainer = document.getElementById('product-list');
     const productDetailContainer = document.getElementById('product-detail');
 
-    fetch('/dbjson/prod_completo.json')
+    fetch('dbjson/prod_completo.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(product =>{
