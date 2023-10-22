@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const productListContainer = document.getElementById('product-list');
     const productDetailContainer = document.getElementById('product-detail');
 
-    fetch('prod_destaca.json')
+    fetch('/dbjson/prod_completo.json')
         .then(response => response.json())
         .then(data => {
             data.forEach(product =>{
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
             })
         })
         .catch(error => {
-            console.error('produ_desta_jsn - Error al obtener datos de la API:', error);
+            console.error('productos - Error al obtener datos de la API:', error);
                 const productElement = document.createElement('div');
                 productElement.classList.add('prod-card');
                 productElement.innerHTML = `

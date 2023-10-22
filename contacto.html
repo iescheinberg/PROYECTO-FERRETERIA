@@ -1,140 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <title>Ferretería S&V</title>
-  <link rel="icon" href="assets/img/loguito.png">
-</head>
-    <!-- BODY -->
-<body>
-  <div class="grilla">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--CDN de animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!--CDN Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!--Icono web-->
+    <link rel="shortcut icon" href="/assets/img/F M Monogram.ico" type="image/x-icon">
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/estilos.css">      
+    
+    <title>Ferretería V&S - Contacto</title>
+  </head>
+  
+  <body>
     <!-- HEADER -->
-    <header>
-      <div>
-        <img class="animate__animated animate__bounceInLeft" src="assets/img/logo.png" alt="logo_del_sitio" width="90px"
-          height="60px">
+    <header class="header">
+      <div class="logo">
+          <img src="/assets/img/logo 1.png" alt="Logo de V&S">
+      </div>
+      
+      <!--BARRA DE NAV-->
+      <nav class="menu">
+          <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/productos.html">Productos</a></li>
+              <li><a href="/nosotros.html">Ofertas</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+      </nav>
+
+      <!--Barra de busqueda-->
+      <div class="search">
+          <input type="text" placeholder="Buscar producto...">
+          <button>Buscar</button>
       </div>
 
-      <div class="titulo_de_pagina">
-        <h1 class="animate__animated animate__bounceInUp">Ferretería Industrial Titulo</h1>
+      <!--Carrito de compra-->
+      <div class="buy-car">
+          <img src="assets/img/shopping-cart.png" alt="Carrito de compra">
       </div>
 
-      <div>
-        <img class="animate__animated animate__bounceInRight" src="assets/img/cart2.png" alt="" width="60px"
-          height="45px">
+      <!--Menu hamburguesa-->
+      <div class="burger">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
       </div>
     </header>
-    <!-- NAVBAR -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="productos.html">Catalogo</a></li>
-        <li><a href="como llegar.html">Como llegar</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
 
     <!-- MAIN -->
-    <main id="grid_main">
-      <!--la imagen de aca se encuentra dentro de una carpeta multimedia que no existe-->
-      <img class="imagenfruta" src="../multimedia/frutas al piso.png" alt="" >
-
-      <section>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ponga su Email">
+    <main class="form-main">
+      <form action="" class="formulario" id="formulario">
+          <div class="formulario__grupo" id="grupo__usuario">
+          <label for="usuario" class="formulario__label">Usuario</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">El usuario válido tendrá entre 4 y 16 dígitos, pudiendo contener solamente numeros, letras y guion bajo.</p>
         </div>
-
-        <div class="mb-3">
-          <label for="" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ponga su Nombre">
+  
+        
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombre</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">El nombre válido tendrá de 4 a 16 dígitos, pudiendo contener solamente letras y espacios.</p>
         </div>
-
-        <div class="mb-3">
-          <label for="" class="form-label">Teléfono</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ponga su Teléfono">
+  
+        
+        <div class="formulario__grupo" id="grupo__password">
+          <label for="password" class="formulario__label">Password</label>
+          <div class="formulario__grupo-input">
+            <input type="password" class="formulario__input" name="password" id="password" placeholder="ingrese password">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">El password válido tendrá de 4 a 12 dígitos.</p>
         </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Escriba su consulta</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  
+        
+        <div class="formulario__grupo" id="grupo__password2">
+          <label for="password2" class="formulario__label">Repetir Password</label>
+          <div class="formulario__grupo-input">
+            <input type="password" class="formulario__input" name="password2" id="password2" placeholder="reingrese password">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">Los password ingresados deben coincidir.</p>
         </div>
-
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Proveedor
+  
+        
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label">Correo Electrónico</label>
+          <div class="formulario__grupo-input">
+            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="email@email.com">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">El email válido solo puede contener letras, numeros, puntos, guiones y guion bajo, e incluir @ y .com.</p>
+        </div>
+  
+        
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="115489725">
+            <i class="formulario__validacion-estado bi bi-x-octagon-fill"></i>
+          </div>
+          <p class="formulario__input-error">El telefono válido solo podrá contener numeros con un maximo son 14 dígitos.</p>
+        </div>
+  
+      
+        <div class="formulario__grupo" id="grupo__terminos">
+          <label class="formulario__label">
+            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+            Acepto Terminos y Condiciones
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
-          <label class="form-check-label" for="flexRadioDefault2">
-            Cliente
-          </label>
+  
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p><i class="bi bi-x-octagon-fill"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
         </div>
-
-        <button type="submit" class="btn btn-dark">Enviar</button>
-      </section>
-      <!--la imagen de aca se encuentra dentro de una carpeta multimedia que no existe-->
-      <img src="../multimedia/frutas al piso.png" alt="" class="imagenfruta">
-
-
+  
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El Formulario se envió exitosamente!</p>
+        </div>
+      </form>  
     </main>
-    <footer>
-
-      <div class="contacto">
-        <h3>Nuestros contactos directos</h3>
-        <p>Teléfono: 4381-3003</p>
-        <p> What Sapp 1167854986</p>
-        <p>E-mail: ferreteriaindustrial@ferreteriaindustrial.com.ar</p>
+      
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="social-media">
+          <img src="assets/img/facebook.png" alt="logo facebook">
+          <img src="assets/img/instagram.png" alt="logo instagram">
+          <img src="assets/img/gorjeo.png" alt="logo twitter">
       </div>
-
-
-      <div class="loguitos_redes">
-
-        <p>Descubrí más en:</p>
-
-        <a href="https://facebook.com/" target="_blank">
-          <i class="bi bi-facebook"></i></a>
-
-        <a href="https://www.instagram.com/" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-
-        <a href="https://twitter.com/" target="_blank">
-          <i class="bi bi-twitter"></i>
-        </a>
+      <div class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37147.550896384266!2d-58.47546408966837!3d-34.61906169268289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1697415680043!5m2!1ses!2sar" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
-      <div class="loguitos_redes">
-
-        <h3>Medio de pago:</h3>
-        <p>Tarjetas débito/credito</p>
-        <p>Efectivo</p>
-        <p>Transferencias</p>
-        <p>Mercado Pago</p>
+      <div class="footer-info">
+        <p>Distribuidora <span>VS</span> &copy;</p>
+        <p>Teléfono: 0800-1589678</p>
       </div>
-
-      <p class="pfooter"> Copyright Ferretería Industrial - 2023. Todos los derechos reservados. / Página construida por
-        HPDiseños </p>
 
     </footer>
 
-  </div>
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-
-
-
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+    <!--Script Form-->
+    <script src="js/formulario.js"></script>
+  </body>
 
 </html>

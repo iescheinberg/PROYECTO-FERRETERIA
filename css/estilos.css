@@ -1,51 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Roboto&display=swap');
+
+:root{
+    --color-primario: #c4e04a;
+    --color-base: #efe66b;
+    --color-detalles: #191507;
+    --color-celeste: #817870;
+    --color-marron: #f3eae8;
+    --fuente-titulos: 'Roboto', sans-serif;
+    --fuente-texto: 'Hind Madurai', sans-serif;
+}
+
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.grilla{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto auto;
-    grid-template-areas: "1header"
-                        "2nav"
-                        "3main"
-                        "4footer";
-
-    min-height: 100vh;
-
+main {
+    font-family: var(--fuente-texto)
 }
 
-.grid_section{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 70% 10%;
-
-    grid-template-areas:"img titulo"
-                        "img parrafo"
-                        "img boton";
-
-    justify-content: space-around;
-    align-content: space-evenly;
-    justify-items: center;
+/*NAVBAR*/
+.header{
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-
-
-}
-
-
-.img_section{
-    width: 50%;
-    height: 70%;
+    padding: 0.2em 0.8em;
+    height: 80px;
+    /* width: 100%; */
     
-    grid-area:img;
 }
 
-#grid_main{
+.header .logo img{
+    cursor: pointer;
+    height: 70px;
+    width: auto;
+    
+}
+
+.header .logo{
+    transition: all 0.3s;
+}
+
+.header .logo:hover{
+    transform: scale(1.1);
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline-block;
+    padding: 0.2em 1em;
+    transition: all 0.3s;
+}
+
+.menu li:hover{
+    transform: scale(1.1);
+}
+
+
+
+.menu a{
+    font-size: 1.2em;
+    font-family: var(--fuente-titulos);
+    text-decoration: none;
+    color: var(--color-detalles);
+}
+
+.menu a:hover{
+    font-weight: bold;
+}
+
+.search input{
+    border-radius: 10px;
+    padding: 0.1em 0.5em;
+    font-family: var(--fuente-titulos);
+    border-style: none;
+    margin: 0.5em;
+}
+
+.search input:focus{
+    border-color: #c4e04a;  /* NO me lo toma */
+    background-color: #efe66b;
+}
+
+.search button{
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+    font-family: var(--fuente-titulos);
+    border-radius: 10px;
+    background-color: #efe66b;
+    border: 1px solid #817870;
+    color: #191507;
+    transition: all 0.3s;
+}
+
+.search button:hover{
+    transform: scale(1.1);
+    background-color: #191507;
+    color: #c4e04a;
+}
+
+.buy-car{
+    margin: 0.5em 3em;
+    transition: all 0.3s;
+}
+
+.buy-car img{
+    width: 25px;
+    
+}
+
+.buy-car:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.burger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+.footer{
+    padding: 0.5rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #efe66b;
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.social-media img{
+    width: 40px;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+
+.social-media img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.footer-info{
+    display: block;
+    align-items: center;
+}
+
+.footer-info p{
+    font-size: 1.2em;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    padding: 0.5em 0;
+}
+
+.footer-info span{
+    font-size: 1.1em;
+    color: var(--color-primario);
+    background-color: #817870;
+    border-radius: 12px;
+    padding: 0.2em;
+}
+
+/*FORMULARIO*/
+
+.form-main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 100%;
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+    border: 3px solid blue;
+    outline: none;
+    box-shadow: 3px 0px 30px black;
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+.formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: palevioletred;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
     display: flex;
     flex-direction: column;
-   
-    
+    align-items: center;
+}
+
+.formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: grey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,158,158, 1);
+}
+
+.formulario__mensaje-exito {
+    font-size: 14px;
+    color: green;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/*estilos para la validacion */
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: green;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: red;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: red;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid red;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 830px) {
+    /*NAVBAR*/
+    .burger{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .footer{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .social-media{
+        justify-content: center;
+    }
+
+    .footer .footer-map{
+        justify-content: center;
+    }
+
+    .footer .footer-info{
+        justify-content: center;
+    }
+
+    /*FORM*/
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos, 
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .formulario__btn {
+        width: 100%;
+    }
 }
 
 
@@ -162,48 +477,3 @@
         
     }
 
-    .grid_section a{
-        font-size: 15px;
-        color: blue;
-    }
-
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-nav {
-    background-color: orange;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-
-}
-
-nav ul {
-    list-style-type: none;
-    margin:0px;
-    padding: 0px;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 5px;
-}
-
-nav ul li a:hover{
-    background-color: aliceblue;
-    color: darkgreen;
-    font-size: 20px;
-}

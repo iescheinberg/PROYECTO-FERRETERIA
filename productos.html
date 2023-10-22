@@ -1,93 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Ferretería S&V - Productos Catalogo</title>
-    <link rel="icon" href="assets/img/loguito.png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--CDN de AJAX-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        
+        <!--CDN de animate-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        
+        <!--Icono web-->
+        <link rel="shortcut icon" href="/assets/img/F M Monogram.ico" type="image/x-icon">
+        
+        <!--Estilos propios-->
+        <link rel="stylesheet" href="css/estilos.css">
+        
+        <title>Ferretería S&V - Productos Catalogo</title>
+    </head>
 
-<body>
-    <div class="grilla">
+    <body>
         <!-- HEADER -->
-        <header>
-            <div>
-                <img class="animate__animated animate__bounceInLeft" src="assets/img/logo.png" alt="logo_del_sitio"
-                    width="90px" height="60px">
+        <header class="header">
+            <div class="logo">
+                <img src="/assets/img/logo 1.png" alt="Logo de V&S">
+            </div>
+            
+            <!--BARRA DE NAV-->
+            <nav class="menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="/nosotros.html">Ofertas</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!--Barra de busqueda-->
+            <div class="search">
+                <input type="text" placeholder="Buscar producto...">
+                <button>Buscar</button>
             </div>
 
-            <div class="titulo_de_pagina">
-                <h1 class="animate__animated animate__bounceInUp">Ferretería Industrial Titulo</h1>
+            <!--Carrito de compra-->
+            <div class="buy-car">
+                <img src="assets/img/shopping-cart.png" alt="Carrito de compra">
             </div>
-
-            <div>
-                <img class="animate__animated animate__bounceInRight" src="assets/img/cart2.png" alt="" width="60px"
-                    height="45px">
+    
+            <!--Menu hamburguesa-->
+            <div class="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
             </div>
         </header>
 
-        <!-- NAVBAR -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="productos.html">Catalogo</a></li>
-                <li><a href="como llegar.html">Como llegar</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+            <!-- Tamaño imagen. Todas tendrían que ser: Ancho 360. Alto 470 -->
 
-        <!-- Tamaño imagen. Todas tendrían que ser: Ancho 360. Alto 470 -->
+            <main class="main-prod">
+                <h2>Catalogo de productos: Herramientas. Marcas.</h2>
 
-        <main class="main-prod">
-            <h2>Catalogo de productos: Herramientas. Marcas.</h2>
+                <div class="prod-container" id="product-list">
+                </div>
 
-            <div class="prod-container" id="product-list">
-            </div>
-
-            <div class="prod-container" id="product-detail" style="display: none;">
-            </div>
-        </main>
+                <div class="prod-container" id="product-detail" style="display: none;">
+                </div>
+            </main>
 
         <!-- FOOTER -->
-        <footer>
-            <div class="contacto">
-                <h3>Nuestros contactos directos</h3>
-                <p>Teléfono: 4381-3003</p>
-                <p> What Sapp 1167854986</p>
-                <p>E-mail: ferreteriaindustrial@ferreteriaindustrial.com.ar</p>
-
-            </div>
-
-            <div class="loguitos_redes">
-                <p>Descubrí más en:</p>
-                <a href="https://facebook.com/" target="_blank">
-                    <i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                    <i class="bi bi-twitter"></i>
-                </a>
-            </div>
-
-            <div class="loguitos_redes">
-                <h3>Medio de pago:</h3>
-                <p>Tarjetas débito/credito</p>
-                <p>Efectivo</p>
-                <p>Transferencias</p>
-                <p>Mercado Pago</p>
-            </div>
-
-            <p class="pfooter"> Copyright Ferretería Industrial - 2023. Todos los derechos reservados. / Página
-                construida por HPDiseños </p>
+        <footer class="footer">
+                <div class="social-media">
+                    <img src="assets/img/facebook.png" alt="logo facebook">
+                    <img src="assets/img/instagram.png" alt="logo instagram">
+                    <img src="assets/img/gorjeo.png" alt="logo twitter">
+                </div>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37147.550896384266!2d-58.47546408966837!3d-34.61906169268289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1697415680043!5m2!1ses!2sar" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer-info">
+                    <p>Distribuidora <span>VS</span> &copy;</p>
+                    <p>Teléfono: 0800-1589678</p>
+                </div>
         </footer>
 
-    </div>
-
-    <script src="productos_jsn.js"></script>
-</body>
+        <script src="/js/productos_jsn.js"></script>
+    </body>
 
 </html>
