@@ -11,19 +11,24 @@ document.addEventListener('DOMContentLoaded', function(){
                 productElement.innerHTML = `
                     <div class="prod-img">
                     <img src="${product.imagen}" alt="${product.nombre}">
-					</div>
+                    </div>
                     <h3 class="prod-nombre">${product.nombre}<br>~<br>$${product.precio.toLocaleString('es-AR')}</h3>
                     <p class="prod-descri">${product.nombre}<br><br>${product.descripcion}<br><br>
                         <b>Precio: $${product.precio.toLocaleString('es-AR')}</b>
                     <br><button class="detail-button" data-id="${product.id}">Ver detalle</button>
                     </p>
                     `;
+
                 productListContainer.appendChild(productElement);
             });
 
+            var lastPositionList = 0;
+//          var lastPositionDetail = 0;
+            var lastPositionDetail = 130; //es el offsetTop de productDetailContainer en PC...no va en celus
             const detailButtons = document.querySelectorAll('.detail-button');
             detailButtons.forEach(button =>{
                 button.addEventListener('click', function(){
+                    lastPositionList = document.documentElement.scrollTop;
                     const productId = this.dataset.id;
                     const selectedProduct = data.find(product => product.id == productId);
 
@@ -39,23 +44,25 @@ document.addEventListener('DOMContentLoaded', function(){
 
                     productListContainer.style.display = 'none';
                     productDetailContainer.style.display = 'flex';
+//                  window.scrollTo(0, 0);
+                    window.scrollTo(0, lastPositionDetail);
 
                     const backButton = document.getElementById('back-button');
                     backButton.addEventListener('click', function(){
+                        lastPositionDetail = productDetailContainer.offsetTop;
                         productDetailContainer.style.display = 'none';
-                        productListContainer.style.display = 'flex'
+                        productListContainer.style.display = 'flex';
+                        window.scrollTo(0, lastPositionList);
                     })
                 })
             })
         })
         .catch(error => {
-            console.error('productos - Error al obtener datos de la API:', error);
+            console.error('prod_completo - Error al obtener datos de la API:', error);
                 const productElement = document.createElement('div');
                 productElement.classList.add('prod-card');
                 productElement.innerHTML = `
-                       <!-- Muestra el mensaje de error -->
                        Error inesperado:<br>
-                       <!-- Muestra el error devuelto -->
                        ${error} <br>
                     </div>`;
                 productListContainer.appendChild(productElement);
