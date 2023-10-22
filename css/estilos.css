@@ -8,9 +8,9 @@
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto auto;
     grid-template-areas: "1header"
-                         "2nav"
-                         "3main"
-                         "4footer";
+                        "2nav"
+                        "3main"
+                        "4footer";
 
     min-height: 100vh;
 
@@ -21,9 +21,9 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 10% 70% 10%;
 
-    grid-template-areas: "img titulo"
-                         "img parrafo"
-                         "img boton";
+    grid-template-areas:"img titulo"
+                        "img parrafo"
+                        "img boton";
 
     justify-content: space-around;
     align-content: space-evenly;
@@ -173,6 +173,8 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 nav {
