@@ -320,12 +320,19 @@ main {
 
 @media screen and (max-width: 830px) {
     /*NAVBAR*/
+    .header .logo img{
+        height: 50px;
+    }
     .burger{
         display: block;
     }
 
     .menu{
         display: none;
+    }
+
+    .show-menu {
+        transform: translateX(0%);
     }
 
     .footer{
