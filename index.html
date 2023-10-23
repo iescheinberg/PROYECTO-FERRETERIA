@@ -7,6 +7,9 @@
         
         <!--CDN de animate-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!--CDN Bootstrap ICON-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
         <!--Icono web-->
         <link rel="shortcut icon" href="./assets/img/F-M-Monogram.ico" type="image/x-icon">
         <!--Estilos propios-->
@@ -26,11 +29,20 @@
             
             <!--BARRA DE NAV-->
             <nav class="menu">
-                <ul>
+                <i id="cerrar-menu" class="cerrar-menu bi bi-x"></i>
+                <ul class="menu-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="./productos.html">Productos</a></li>
-                    <li><a href="./nosotros.html">Ofertas</a></li>
+                    <li><a href="./ofertas.html">Ofertas</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
+                    <li>
+                        <div class="buy-car-responsive">
+                            <a href="#">
+                                <img src="./assets/img/shopping-cart.png" alt="Carrito de compra">
+                                Carrito</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
     
@@ -42,11 +54,11 @@
 
             <!--Carrito de compra-->
             <div class="buy-car">
-                <img src="assets/img/shopping-cart.png" alt="Carrito de compra">
+                <img src="./assets/img/shopping-cart.png" alt="Carrito de compra">
             </div>
     
             <!--Menu hamburguesa-->
-            <div class="burger">
+            <div id="abrir-menu" class="burger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
@@ -55,6 +67,11 @@
 
             <!-- MAIN -->
             <main id="main_prod">
+                <div class="weather">
+                    <h4>Clima actual en la tienda</h4>
+                    <span>Barrio: <span id="country"></span></span>
+                    <span>Temperatura: <span id="temperature"></span>°C</span>
+                </div>
         <!-- Tamaño imagen. Todas tendrían que ser: Ancho 360. Alto 470 -->
                 <h2>Productos destacados</h2>
 
@@ -84,8 +101,13 @@
 
 
         <!--SCRIPTS JS-->
+        <!--Script despliegue de productos destacados-->
         <script src="./js/produ_desta_jsn.js"></script>
+        <!--Script responsive menu-->
         <script src="./js/show_menu.js"></script>
+        <!--Script API Clima-->
+        <script src="./js/climaAPI.js"></script>
     </body>
+
 
 </html>

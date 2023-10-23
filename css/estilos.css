@@ -1,5 +1,7 @@
+/*Import de fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Roboto&display=swap');
 
+/*Variables de fuentes y paleta de colores*/
 :root{
     --color-primario: #c4e04a;
     --color-base: #efe66b;
@@ -10,17 +12,21 @@
     --fuente-texto: 'Hind Madurai', sans-serif;
 }
 
+/*SETEO GENERAL*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/*Fuente general*/
 main {
     font-family: var(--fuente-texto)
 }
 
+/*//////////////*/
 /*NAVBAR*/
+/*//////////////*/
 .header{
     background-color: var(--color-primario);
     display: flex;
@@ -61,8 +67,6 @@ main {
     transform: scale(1.1);
 }
 
-
-
 .menu a{
     font-size: 1.2em;
     font-family: var(--fuente-titulos);
@@ -83,8 +87,8 @@ main {
 }
 
 .search input:focus{
-    border-color: #c4e04a;  /* NO me lo toma */
-    background-color: #efe66b;
+    border-color: var(--color-primario);  /* NO me lo toma */
+    background-color: var(--color-base);
 }
 
 .search button{
@@ -92,16 +96,16 @@ main {
     font-size: 1em;
     font-family: var(--fuente-titulos);
     border-radius: 10px;
-    background-color: #efe66b;
-    border: 1px solid #817870;
-    color: #191507;
+    background-color: var(--color-base);
+    border: 1px solid var(--color-celeste);
+    color: var(--color-detalles);
     transition: all 0.3s;
 }
 
 .search button:hover{
     transform: scale(1.1);
-    background-color: #191507;
-    color: #c4e04a;
+    background-color: var(--color-detalles);
+    color: var(--color-primario);
 }
 
 .buy-car{
@@ -111,7 +115,6 @@ main {
 
 .buy-car img{
     width: 25px;
-    
 }
 
 .buy-car:hover{
@@ -119,6 +122,14 @@ main {
     cursor: pointer;
 }
 
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.buy-car-responsive {
+    display: none;
+}
 
 .burger{
     display: none;
@@ -126,22 +137,27 @@ main {
     cursor: pointer;
 }
 
+/*//////////////*/
+/*FIN DEL HEADER*/
+/*//////////////*/
 
+
+/*//////////////*/
 /* FOOTER */
+/*//////////////*/
 .footer{
     padding: 0.5rem 2rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #efe66b;
+    background-color: var(--color-base);
 }
 
 .social-media{
     display: flex;
     justify-content: space-between;
 }
-
 
 .social-media img{
     width: 40px;
@@ -169,13 +185,44 @@ main {
 .footer-info span{
     font-size: 1.1em;
     color: var(--color-primario);
-    background-color: #817870;
+    background-color: var(--color-celeste);
     border-radius: 12px;
     padding: 0.2em;
 }
+/*//////////////*/
+/*Fin del footer*/
+/*//////////////*/
 
+/*//////////////*/
+/*SECCION NOSOTROS*/
+/*//////////////*/
+
+.nosotros-info{
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.quienes-somos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.img-nosotros {
+    width: 100%;
+}
+
+.img-nosotros img {
+    width: 100%;
+}
+
+/*//////////////*/
+/*FIN NOSOTROS*/
+/*//////////////*/
+
+
+/*//////////////*/
 /*FORMULARIO*/
-
+/*//////////////*/
 .form-main {
     max-width: 800px;
     width: 90%;
@@ -203,7 +250,7 @@ main {
 
 .formulario__input {
     width: 100%;
-    background: white;
+    background: var(--color-marron);
     border: 3px solid transparent;
     border-radius: 3px;
     height: 45px;
@@ -213,9 +260,9 @@ main {
 }
 
 .formulario__input:focus {
-    border: 3px solid blue;
+    border: 3px solid var(--color-primario);
     outline: none;
-    box-shadow: 3px 0px 30px black;
+    box-shadow: 3px 0px 30px var(--color-detalles);
 }
 
 .formulario__input-error {
@@ -250,7 +297,8 @@ main {
 .formulario__mensaje {
     height: 45px;
     line-height: 45px;
-    background: palevioletred;
+    background: var(--color-detalles);
+    color: var(--color-marron);
     padding: 0 15px;
     border-radius: 3px;
     display: none;
@@ -274,8 +322,8 @@ main {
     height: 45px;
     line-height: 45px;
     width: 30%;
-    background: grey;
-    color: white;
+    background: var(--color-detalles);
+    color: var(--color-marron);
     font-weight: bold;
     border: none;
     border-radius: 3px;
@@ -284,7 +332,9 @@ main {
 }
 
 .formulario__btn:hover {
-    box-shadow: 3px 0px 30px rgba(163,158,158, 1);
+    box-shadow: 3px 0px 30px var(--color-detalles);
+    background: var(--color-base);
+    color: var(--color-detalles);
 }
 
 .formulario__mensaje-exito {
@@ -296,8 +346,9 @@ main {
 .formulario__mensaje-exito-activo {
     display: block;
 }
-
+/*////////////////////////////*/
 /*estilos para la validacion */
+/*///////////////////////////*/
 .formulario__grupo-correcto .formulario__validacion-estado {
     color: green;
     opacity: 1;
@@ -316,24 +367,95 @@ main {
     border: 3px solid red;
 }
 
-/* RESPONSIVE */
+/*//////////////*/
+/* FIN DEL FORM */
+/*//////////////*/
 
-@media screen and (max-width: 830px) {
+/*//////////////*/
+/* CLIMA API */
+/*//////////////*/
+.weather{
+    background-color: var(--color-celeste);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+    text-align: center;
+    top: 20px;
+    left: 20px;
+}
+
+/*//////////////*/
+/* FIN CLIMA API */
+/*//////////////*/
+
+
+/*//////////////*/
+/* RESPONSIVE */
+/*//////////////*/
+
+/*//////////////*/
+/*Para tablets*/
+/*//////////////*/
+@media screen and (max-width: 768px) {
     /*NAVBAR*/
     .header .logo img{
         height: 50px;
     }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: var(--color-detalles);
+    }
+
+    .cerrar-menu {
+        color: var(--color-marron);
+    }
+
     .burger{
         display: block;
     }
 
     .menu{
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        color: var(--color-marron);
+        background-color: var(--color-detalles);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
 
-    .show-menu {
-        transform: translateX(0%);
+    .menu.visible {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
     }
+    
+    .menu ul li  {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu ul li a {
+        color: var(--color-marron);
+    }
+
 
     .footer{
         display: block;
@@ -385,8 +507,8 @@ main {
     overflow: hidden;
     position: relative;
     border-radius: 10px;
-    background-color: darkgreen;
-    color: antiquewhite;
+    background-color: var(--color-detalles);
+    color: var(--color-marron);
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);}
 
 .prod-container .prod-card img {
@@ -400,14 +522,14 @@ main {
     text-align: center;}
 
 .prod-container .prod-card .prod-descri {
-    color: darkgreen;
+    color: var(--color-marron);
     bottom: -100%;
     position: absolute;    
     padding: 30px;
     max-height: 100%;
     overflow-y: auto;
     line-height: 15px;
-    background-color: #ffffff;
+    background-color: var(--color-detalles);
     box-sizing: border-box;
     transition: bottom 0.4s ease-in-out;}
 .prod-container .prod-card:hover .prod-descri {
@@ -416,7 +538,8 @@ main {
 .prod-container .prod-card:hover .prod-descri .detail-button {
     padding: 5px;
     border: 0;
-    background-color:darksalmon ;
+    background-color:var(--color-primario);
+    color: var(--color-detalles);
     margin-top: 10px; 
     margin-bottom: 5px; 
     border-radius: 10px;
@@ -433,8 +556,8 @@ main {
     overflow: hidden;
     position: relative;
     border-radius: 15px;
-    background-color: darkgreen;
-    color: antiquewhite;
+    background-color: var(--color-detalles);
+    color: var(--color-marron);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.3);}
 
 .prod-container .prod-detalle h2{
@@ -452,7 +575,8 @@ main {
 .prod-container .prod-detalle button {
     padding: 5px;
     border: 0;
-    background-color:darksalmon ;
+    background-color:var(--color-primario) ;
+    color: var(--color-detalles);
     margin: 10px;     
     border-radius: 10px;
     position: relative;
@@ -478,9 +602,35 @@ main {
         font-size: 80%;
     }
 
-    .butera{
-        width: 80%;
-        height: 25px;
-        
-    }
 
+    /*//////////////*/
+    /*Para telefono*/
+    /*//////////////*/
+    @media screen and (max-width: 425px) {
+        .buy-car{
+            display: none;
+        }
+
+        .buy-car-responsive{
+            display:inline-block;
+            text-align: end;
+        }
+
+        .buy-car-responsive a img {
+            width: 15%;
+            color: var(--color-marron)
+        }
+
+        /*//////////*/
+        /*NOSOTROS*/
+        /*//////////*/
+
+        .quienes-somos{
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*//////////*/
+        /*FIN NOSOTROS*/
+        /*//////////*/
+    }
